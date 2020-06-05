@@ -5,7 +5,7 @@ Data analysis for CF032 case study
 
 Using all reads (n=1.3 million):
 
-![fragment recruitment assembly purification!](FRAP_pic.png)
+![Assembly using all reads!](100000reads-lysate-Axy06.jpg)
 
 Using a subsample (n=100,000 reads):
 
