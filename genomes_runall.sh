@@ -20,6 +20,7 @@ cat $1 | xargs -t -I{fileID} sh -c "prinseq++ -fastq $2/P00_raw/{fileID}_R1_001.
 #2.- Denovo assembly and comparison to NT
 mkdir $2/P02_denovo
 cat $1 | xargs -I{fileID} sh -c "spades.py -1 $2/P01_prinseq_output/{fileID}_good_out_R1.fasta -2 $2/P01_prinseq_output/{fileID}_good_out_R2.fasta -t $3 --only-assembler -o $2/P02_denovo/spades_{fileID}"
+#make sure you have the script removesmalls.pl in your home
 cat $1 | xargs -I{fileID} sh -c "perl /home/acobian/bin/removesmalls.pl 900 $2/P02_denovo/spades_{fileID}/contigs.fasta > $2/P02_denovo/more900_contigs_{fileID}.fasta"
 
 cat $1 | xargs -I{fileID} sh -c "blastn -query $2/P02_denovo/more900_contigs_{fileID}.fasta -db /home/DATABASES/blast/nt/nt -out $2/P02_denovo/vs_NT_more900_contigs_{fileID}.blastn -evalue 0.1 -num_threads $3 -max_target_seqs 1 -outfmt '6 qseqid sseqid pident length mismatchgapopen qstart qend sstart send evalue bitscore sskingdoms sscinames'"
