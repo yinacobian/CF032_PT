@@ -27,6 +27,9 @@ http://combo.dbe.unifi.it/contiguator
 
 ![Contigs to reference!](DC032-to-HE798385.1.pdf)
 
+Download the results folder and get the file: PseudoContig.fsa
+
+Rename the sequence and use this as your reference genome
 
 # Fragment recruitment plots 
 ## Phage lysates vs Bacteria genome
