@@ -14,3 +14,7 @@ Using a subsample (n=100,000 reads):
 Get the closest reference genome: 
 
 `cut -f 2 besthit_vs_NT_more900_contigs_DC032_S62.blastn | sort -n | uniq -c | sort -nr`
+
+Make sure that is a "complete genome", that is, not contigs. Then download the complete genome fasta file. In this case:
+
+https://www.ncbi.nlm.nih.gov/nuccore/507098404
