@@ -11,3 +11,6 @@ Using a subsample (n=100,000 reads):
 
 # Bacteria genomes assemblies
 
+Get the closest reference genome: 
+
+`cut -f 2 besthit_vs_NT_more900_contigs_DC032_S62.blastn | sort -n | uniq -c | sort -nr`
