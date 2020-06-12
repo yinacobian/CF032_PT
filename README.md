@@ -17,4 +17,5 @@ Get the closest reference genome:
 
 Make sure that is a "complete genome", that is, not contigs. Then download the complete genome fasta file. In this case:
 
-https://www.ncbi.nlm.nih.gov/nuccore/507098404
+https://www.ncbi.nlm.nih.gov/nuccore/HE798385.1?report=fasta
+
