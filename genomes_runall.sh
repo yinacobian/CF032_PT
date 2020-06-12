@@ -9,6 +9,7 @@
 #3) Create a folder for the raw reads, inside your main project folder: mkdir CF032_2020/P00_raw
 #4) Put all reads files, including R1 and R1 inside the folder CF032_2020/P00_raw
 #5) Create a list with the sample names and save it as IDS.txt, place it in the folder CF032_2020
+## For example use this command line: ls P00_raw/ | cut -d '_' -f 1,2 | uniq > IDS.txt
 #6) Open a screes session: screen -DR CF032 
 #7) Run the command: bash genomes_runall.sh IDS.txt /home/acobian/CF032_2020 40
 
